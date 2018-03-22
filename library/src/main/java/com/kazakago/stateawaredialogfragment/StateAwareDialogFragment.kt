@@ -15,6 +15,7 @@ abstract class StateAwareDialogFragment<Interface> : AppCompatDialogFragment() {
     }
 
     private enum class Key {
+        ConnectableUnSupportedClass,
         ListenerTargetType
     }
 
@@ -31,6 +32,7 @@ abstract class StateAwareDialogFragment<Interface> : AppCompatDialogFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (savedInstanceState != null) {
+            connectableUnSupportedClass = savedInstanceState.getBoolean(Key.ConnectableUnSupportedClass.name)
             listenerTargetType = savedInstanceState.getSerializable(Key.ListenerTargetType.name) as ListenerTargetType
             callbackListener = when (listenerTargetType) {
                 ListenerTargetType.ACTIVITY -> context as? Interface
@@ -42,6 +44,7 @@ abstract class StateAwareDialogFragment<Interface> : AppCompatDialogFragment() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
+        outState.putBoolean(Key.ConnectableUnSupportedClass.name, connectableUnSupportedClass)
         outState.putSerializable(Key.ListenerTargetType.name, listenerTargetType)
     }
 

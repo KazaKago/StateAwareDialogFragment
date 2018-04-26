@@ -22,7 +22,7 @@ implementation 'com.kazakago.stateawaredialogfragment:stateawaredialogfragment:x
 ## Usage
 
 implement `StateAwareDialogFragment` instead of `DialogFragment`  
-and specify the callback listener as the generic for `StateAwareDialogFragment`.  
+and specify the callback listener as the generics for `StateAwareDialogFragment`.  
 
 You can access the listener's entity from `StateAwareDialogFragment.callbackListener`.  
 

@@ -87,6 +87,7 @@ class NoticeDialog : StateAwareDialogFragment<NoticeDialog.DialogCallbackListene
     
 }
 ```
+
 ## License
 
 MIT License

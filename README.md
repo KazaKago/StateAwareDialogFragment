@@ -83,7 +83,7 @@ The following code can be controlled so as not to crash at run time, but the lis
 ```kotlin
 class NoticeDialog : StateAwareDialogFragment<NoticeDialog.DialogCallbackListener>() {
 
-    override var connectableUnSupportedClass = false
+    override var connectableUnSupportedClass = true
     
 }
 ```

@@ -34,12 +34,6 @@ class NoticeDialog : StateAwareDialogFragment<NoticeDialog.DialogCallbackListene
         fun onNegativeButtonClicked(tag: String?)
     }
 
-    companion object {
-        fun createInstance(): NoticeDialog {
-            return NoticeDialog()
-        }
-    }
-
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return AlertDialog.Builder(activity!!)
                 .setTitle("Notice!")
@@ -64,7 +58,7 @@ class MainActivity : AppCompatActivity(), NoticeDialog.DialogCallbackListener {
     ...
 
     private fun showDialog() {
-        val dialog = NoticeDialog.createInstance()
+        val dialog = NoticeDialog()
         dialog.callbackListener = this
         dialog.show(supportFragmentManager, "")
     }

@@ -2,8 +2,8 @@ package com.kazakago.stateawaredialogfragment
 
 import android.app.Activity
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatDialogFragment
+import androidx.appcompat.app.AppCompatDialogFragment
+import androidx.fragment.app.Fragment
 
 abstract class StateAwareDialogFragment<Interface> : AppCompatDialogFragment() {
 
@@ -32,8 +32,10 @@ abstract class StateAwareDialogFragment<Interface> : AppCompatDialogFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (savedInstanceState != null) {
-            connectableUnSupportedClass = savedInstanceState.getBoolean(Key.ConnectableUnSupportedClass.name)
-            listenerTargetType = savedInstanceState.getSerializable(Key.ListenerTargetType.name) as ListenerTargetType
+            connectableUnSupportedClass =
+                savedInstanceState.getBoolean(Key.ConnectableUnSupportedClass.name)
+            listenerTargetType =
+                savedInstanceState.getSerializable(Key.ListenerTargetType.name) as ListenerTargetType
             callbackListener = when (listenerTargetType) {
                 ListenerTargetType.ACTIVITY -> context as? Interface
                 ListenerTargetType.FRAGMENT -> targetFragment as? Interface

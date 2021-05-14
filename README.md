@@ -1,8 +1,9 @@
 StateAwareDialogFragment
 ====
 
-[![Download](https://api.bintray.com/packages/kazakago/maven/stateawaredialogfragment/images/download.svg)](https://bintray.com/kazakago/maven/stateawaredialogfragment/_latestVersion)
-[![Build Status](https://app.bitrise.io/app/bf042310a2709cda/status.svg?token=Thq4gOuFmYOrZKQkllUg0w&branch=master)](https://app.bitrise.io/app/bf042310a2709cda)
+[![Maven Central](https://img.shields.io/maven-central/v/com.kazakago.stateawaredialogfragment/stateawaredialogfragment.svg)](https://search.maven.org/artifact/com.kazakago.stateawaredialogfragment/stateawaredialogfragment)
+[![javadoc](https://javadoc.io/badge2/com.kazakago.stateawaredialogfragment/stateawaredialogfragment/javadoc.svg)](https://javadoc.io/doc/com.kazakago.stateawaredialogfragment/stateawaredialogfragment)
+[![Test](https://github.com/KazaKago/stateawaredialogfragment/workflows/Test/badge.svg)](https://github.com/KazaKago/cryptore/actions?query=workflow%3ATest)
 [![license](https://img.shields.io/github/license/kazakago/stateawaredialogfragment.svg)](LICENSE.md)
 
 Wrapper class of Android's DialogFragment that can automatically restore the state of callback listener after Activity recreation.

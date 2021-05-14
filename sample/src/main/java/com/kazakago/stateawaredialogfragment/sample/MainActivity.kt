@@ -1,9 +1,9 @@
 package com.kazakago.stateawaredialogfragment.sample
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import android.widget.Button
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity(), NoticeDialog.DialogCallbackListener {
 
@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity(), NoticeDialog.DialogCallbackListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val showDialogButton = findViewById<Button>(R.id.showDialogButton)
         showDialogButton.setOnClickListener {
             showDialog()
         }

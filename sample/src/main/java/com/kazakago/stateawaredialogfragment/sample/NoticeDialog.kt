@@ -2,7 +2,7 @@ package com.kazakago.stateawaredialogfragment.sample
 
 import android.app.Dialog
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
+import androidx.appcompat.app.AlertDialog
 import com.kazakago.stateawaredialogfragment.StateAwareDialogFragment
 
 class NoticeDialog : StateAwareDialogFragment<NoticeDialog.DialogCallbackListener>() {
@@ -19,7 +19,7 @@ class NoticeDialog : StateAwareDialogFragment<NoticeDialog.DialogCallbackListene
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return AlertDialog.Builder(activity!!)
+        return AlertDialog.Builder(requireActivity())
                 .setTitle("Notice!")
                 .setMessage("you can rotate device & callback button.")
                 .setPositiveButton("OK") { _, _ ->
